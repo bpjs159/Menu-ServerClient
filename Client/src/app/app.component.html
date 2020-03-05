@@ -1,0 +1,15 @@
+<div class="left-menu">
+  <div class="accordion">
+
+    <div class="section" *ngFor="let item of menu; let i = index">
+      <input id="{{item.label}}" type="radio" name="accordion-1"/>
+      <label for="{{item.label}}"><i class="fa {{item.icon}}"></i><span> {{item.label}}</span></label>
+      <div class="content">
+        <ul>
+          <li *ngFor="let subItem of item.children"><i class="fa {{subItem.icon}}"></i><span>{{subItem.label}}</span></li>
+        </ul>
+      </div>
+    </div>
+    
+  </div>
+</div>
